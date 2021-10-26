@@ -41,7 +41,7 @@ const middle = function(array) {
       ];
     }
   } 
-}
+};
 
 console.log(middle([1])) // => []
 console.log(middle([1, 2])) // => []
