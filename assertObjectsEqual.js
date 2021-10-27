@@ -1,12 +1,3 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  //console.assert(actual === expected);
-    if (actual === expected) {
-      console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-    }
-  };
 
   const eqArrays = function (arrayOne, arrayTwo) {
     console.log("this is arrayOne", arrayOne);
@@ -53,6 +44,19 @@ return true;
 }
 };
 
+
+
+const assertObjectsEqual = function (actual, expected) {
+  const inspect = require('util').inspect;
+  if (eqObjects(actual, expected) === true) {
+    //console.log(inspect);
+    console.log(`✅✅✅ Assertion Passed: ${inspect(actual)} === ${inspect(expected)}`);
+    } else {
+    console.log(`🛑🛑🛑 Assertion Failed: ${inspect(actual)} !== ${inspect(expected)}`);
+    }
+};
+
+
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
 //assertEqual(eqObjects(ab, ba), true); // => true
@@ -66,4 +70,9 @@ const dc = { d: ["2", 3], c: "1" };
 console.log(eqObjects(cd, dc))
 const cd2 = { c: "1", d: ["2", 3, 4] };
 //assertEqual(eqObjects(cd, cd2), false); // => false
+
+
+console.log(assertObjectsEqual(ab, ba))
+console.log(assertObjectsEqual(ab, abc))
+
 

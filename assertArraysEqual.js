@@ -16,15 +16,22 @@
 //console.log(eqArrays([1, 2, 3], [1, 2, 3]));
 
 
-const assertArraysEqual = function (input) {
-  if (input === true) {
-    console.log(`This is true.`)
+const assertArraysEqual = function (actual, expected) {
+
+    if (eqArrays(actual, expected) === true) {
+    console.log(`Arrays are equal.`)
   } else {
-    console.log(`This is false.`)
+    console.log(`Arrays are not equal.`)
   }
 };
 
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]));
+
+console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]))
+
+
+
+
+
 
 // eqArrays([1, 2, 3], [1, 2, 3]) // => true
   
