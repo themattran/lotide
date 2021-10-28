@@ -4,7 +4,7 @@
       return false;
     }
 
-    for (let i of arrayOne) {
+    for (let i = 0; i < arrayOne.length; i++) {
         if (arrayOne[i] !== arrayTwo[i]) {
           /* this will compare the same index from arrayOne && arrayTwo*/
           return false;
