@@ -4,7 +4,7 @@
 
 
     for (let objectKey of objectKeys) {
-      const objectValue = object[objectKey];
+      const objectValue = object[objectKey]; // of the object from findKey we are targeting objectkey (e.g. "Blue Hill"). This equals to the ObjectValue of findKey() (e.g. { stars: 1 } and we plug this into callback functionto see if it === 2 )
       if (callback(objectValue) === true) { //callback(index)is the key?
         return objectKey;
       }
