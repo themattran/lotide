@@ -11,9 +11,7 @@ const assertEqual = function(actual, expected) {
   
   const findKeyByValue = function (object, genre) {
     const keyArray = Object.keys(object) // Outputs: [ 'sci_fi', 'comedy', 'drama' ]
-    // const keyArray = Object.keys(object)[Object.values(object).indexOf(genre)]
-    // console.log(keyArray)
-    // return keyArray
+ 
 
     for (let key of keyArray) {
       if (object[key] === genre) { //object[key] IS the value
