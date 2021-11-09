@@ -1,42 +1,13 @@
-
-  const eqArrays = function (arrayOne, arrayTwo) {
-    if (arrayOne.length !== arrayTwo.length) {
-      return false;
-    }
-
-    for (let i = 0; i < arrayOne.length; i++) {
-        if (arrayOne[i] !== arrayTwo[i]) {
-          /* this will compare the same index from arrayOne && arrayTwo*/
-          return false;
-        } 
-      }
-    return true;
-  };
-  
-//console.log(eqArrays([1, 2, 3], [1, 2, 3]));
-
+const eqArrays = require('./eqArrays'); 
 
 const assertArraysEqual = function (actual, expected) {
 
     if (eqArrays(actual, expected) === true) {
-    console.log(`Arrays are equal.`)
+    console.log(`true`)
   } else {
-    console.log(`Arrays are not equal.`)
+    console.log(`false`)
   }
 };
 
+module.exports = assertArraysEqual; 
 
-console.log(assertArraysEqual([1, 2, 3], [1, 2, 3]))
-
-
-
-
-
-
-// eqArrays([1, 2, 3], [1, 2, 3]) // => true
-  
-// eqArrays([1, 2, 3], [1, 2, 3]);
-// eqArrays([1, 2, 3], [3, 2, 1]) // => false
-
-// eqArrays(["1", "2", "3"], ["1", "2", "3"]) // => true
-// eqArrays(["1", "2", "3"], ["1", "2", 3]) // => false
