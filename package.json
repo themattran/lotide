@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "lotide-matthew-tran-3",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project was created and published by me as part of my learnings at Lighthouse Labs; a mini clone of Lodash.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/themattran/lotide.git"
   },
-  "author": "",
+  "author": "Matthew Tran",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/themattran/lotide/issues"
@@ -22,5 +22,8 @@
   "devDependencies": {
     "chai": "^4.3.4",
     "mocha": "^9.1.3"
+  },
+  "dependencies": {
+    "lotide": "^1.0.1"
   }
 }
